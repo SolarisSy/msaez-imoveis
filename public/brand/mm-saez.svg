@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" role="img" aria-labelledby="title desc">
+  <title id="title">MM Saez Corretora de Imóveis</title>
+  <desc id="desc">Logotipo em nude sobre fundo chocolate</desc>
+  <rect width="760" height="190" rx="8" fill="#4A2D29"/>
+  <g fill="none" stroke="#E4C5B7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M45 82 86 45l41 37v57H45Z"/>
+    <path d="M70 139v-34h31v34M78 67h16v16H78Z"/>
+    <path d="M30 88 86 38l56 50"/>
+  </g>
+  <text x="170" y="98" fill="#F1DACE" font-family="Georgia, serif" font-size="78" font-style="italic" letter-spacing="2">MM Saez</text>
+  <text x="174" y="143" fill="#D8B8AA" font-family="Arial, sans-serif" font-size="23" letter-spacing="7">CORRETORA DE IMÓVEIS</text>
+</svg>
