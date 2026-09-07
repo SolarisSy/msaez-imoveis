@@ -1,6 +1,34 @@
 # Design System
 
-## Paleta atual — Smoky Quartz (Pantone 18-1107 TCX)
+## Paleta atual — Ultimate Gray (Pantone 17-5104 TCX · #939597)
+
+Cinza **neutro frio**. Substituiu o Smoky Quartz (`#817973`), que era quente/taupe.
+
+| Token | Hex | Uso |
+|---|---|---|
+| `--ug-50` | `#F7F7F8` | superfícies claras |
+| `--ug-100` | `#EFEFF1` | topbar e hero |
+| `--ug-200` | `#E3E4E6` | fundo do conteúdo claro |
+| `--ug-300` | `#C9CBCD` | texto sobre escuro, CTA sólido |
+| `--ug-400` | `#A9ABAE` | acentos, ícones, eyebrows |
+| `--ug` | `#939597` | **Ultimate Gray** — avatar, nav ativa, itálico do hero |
+| `--ug-600` | `#74767A` | texto secundário no claro |
+| `--ug-900` | `#222426` | títulos e sidebar |
+
+Os tokens `--sq-*` continuam existindo e apontam para os `--ug-*` — assim as dezenas de
+regras escritas antes não precisaram ser reescritas. **Ao trocar de paleta de novo,
+basta redefinir os valores no topo do bloco.**
+
+Superfícies escuras: cards `rgba(32,34,36,.84)`, hairlines `rgba(201,203,205,.16)`.
+
+**Fundo:** `brand/polygon-gray.jpg` — a mesma malha low-poly, gerada com viés frio
+(azul > verde > vermelho, em `scripts/lowpoly.py`). Usada nas três superfícies escuras:
+catálogo, página do produto e rodapé.
+
+**Única cor fora da paleta:** o verde `#25D366` do botão do WhatsApp e o `#5BBE72` do
+ícone inline — marca de terceiro, precisa ser reconhecível.
+
+## Histórico — Smoky Quartz (Pantone 18-1107 TCX)
 
 Cinzas quentes / taupe. **Substituiu o eixo rosa-terracota** (Powder Pink `#D6A491`,
 terracota `#A96559`, Desert Sand `#CFB591`) em todo o site — esses tons não devem voltar.

@@ -26,13 +26,15 @@ for simplex in tri.simplices:
     poly = pts[simplex]
     cx, cy = poly[:, 0].mean() / W, poly[:, 1].mean() / H
     # base: escuro no topo, um pouco mais claro embaixo (como a referência)
-    base = 12 + 30 * (cy ** 1.5)
+    base = 14 + 34 * (cy ** 1.5)
     # iluminação direcional: facetas à esquerda-baixo pegam mais luz
     light = 10 * (1 - cx) * cy
     tone = base + light + rng.normal(0, 3.4)
-    v = int(np.clip(tone, 6, 62))
-    draw.polygon([(x * SS, y * SS) for x, y in poly], fill=(v, v, v))
+    v = np.clip(tone, 6, 62)
+    # Ultimate Gray #939597 é levemente frio: azul > verde > vermelho
+    r, g, b = v * 0.97, v * 0.99, v * 1.06
+    draw.polygon([(x * SS, y * SS) for x, y in poly], fill=(int(r), int(g), int(b)))
 
 img = img.resize((W, H), Image.LANCZOS)
-img.save('brand/polygon-dark.jpg', quality=92, optimize=True, progressive=True)
+img.save('brand/polygon-gray.jpg', quality=92, optimize=True, progressive=True)
 print('gerado:', img.size)

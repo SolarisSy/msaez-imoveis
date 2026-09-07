@@ -608,3 +608,40 @@
 .spec-badge { background:rgba(173,166,159,.18); color:var(--sq-300) !important; }
 .detail-page .detail-story p.detail-note { color:var(--muted); }
 .footer-brand img { filter:brightness(0) invert(1); opacity:.88; }
+
+/* ==========================================================================
+   PALETA ULTIMATE GRAY — Pantone 17-5104 TCX (#939597)
+   Cinza neutro frio. Substitui o Smoky Quartz (que era quente/taupe).
+   Os tokens --sq-* seguem existindo por compatibilidade e apontam para --ug-*.
+   ========================================================================== */
+:root {
+  --ug-50:#F7F7F8; --ug-100:#EFEFF1; --ug-200:#E3E4E6; --ug-300:#C9CBCD;
+  --ug-400:#A9ABAE; --ug:#939597; --ug-600:#74767A; --ug-700:#55575A; --ug-900:#222426;
+
+  --sq-50:var(--ug-50); --sq-100:var(--ug-100); --sq-200:var(--ug-200);
+  --sq-300:var(--ug-300); --sq-400:var(--ug-400); --sq:var(--ug);
+  --sq-600:var(--ug-600); --sq-700:var(--ug-700); --sq-900:var(--ug-900);
+}
+
+/* Fundo: mesma malha low-poly, agora em cinza frio */
+.catalog-panel { background:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.24)),url('../brand/polygon-gray.jpg') center/cover fixed; }
+.site-footer { background:linear-gradient(rgba(0,0,0,.26),rgba(0,0,0,.56)),url('../brand/polygon-gray.jpg') center/cover fixed; }
+.modal-card:has(.detail-page) { background:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.32)),url('../brand/polygon-gray.jpg') center/cover fixed; }
+
+/* Superfícies escuras: neutras, sem o calor do tema anterior */
+.app-shell { background:linear-gradient(90deg,rgba(239,239,241,.97),rgba(227,228,230,.92)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90') center/cover fixed; }
+.sidebar { background:rgba(30,32,34,.94); }
+.property-grid .property-card { background:rgba(32,34,36,.84); border-color:rgba(169,171,174,.2); }
+.property-grid .property-card:hover { background:rgba(46,48,51,.92); }
+.property-grid .property-meta { border-color:rgba(169,171,174,.18); }
+.broker-body { background:rgba(32,34,36,.72); border-color:rgba(201,203,205,.14); }
+.spec-badge { background:rgba(169,171,174,.18); }
+.detail-page { --paper:rgba(32,34,36,.84); --hair:rgba(201,203,205,.16); --pink-wash:rgba(22,24,26,.5); }
+.detail-page .modal-close { background:rgba(32,34,36,.92); }
+.stage-nav { background:rgba(22,24,26,.72); }
+.stage-nav:hover { background:rgba(22,24,26,.9); }
+.site-footer { --f-panel:rgba(32,34,36,.72); --f-hair:rgba(201,203,205,.16); }
+.footer-tags button { background:rgba(32,34,36,.62); }
+.footer-tags button:hover { background:rgba(50,53,56,.85); }
+.footer-bar { background:rgba(14,15,16,.72); }
+.modal-card:has(.detail-page) { scrollbar-color:var(--ug) rgba(22,24,26,.5); }
