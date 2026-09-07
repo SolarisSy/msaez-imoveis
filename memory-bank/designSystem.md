@@ -73,6 +73,10 @@ semente ou paleta.
 O véu por cima é leve (`rgba(0,0,0,.06 → .26)`): com véu forte as facetas somem e o
 fundo vira um preto chapado.
 
+O **rodapé usa a mesma imagem**, com véu um pouco mais forte. Como os dois usam
+`background-attachment: fixed`, as facetas se alinham e a passagem do painel para o
+rodapé fica contínua, sem emenda.
+
 Os cards viraram cinza neutro (`rgba(26,24,24,.82)`) com borda quente `#D6A491`, para
 acompanhar o fundo frio sem perder o vínculo com a marca.
 

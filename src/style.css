@@ -516,3 +516,13 @@
 /* Cards: cinza neutro para acompanhar o fundo, com a borda quente da marca. */
 .property-grid .property-card { background:rgba(26,24,24,.82); border-color:rgba(214,164,145,.16); }
 .property-grid .property-card:hover { background:rgba(34,31,31,.92); }
+
+/* Rodapé: mesmo fundo low-poly da grade — com `fixed` os dois se alinham,
+   então a transição entre painel e rodapé fica contínua. */
+.site-footer {
+  --f-panel:rgba(26,24,24,.72);
+  background:linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.58)),url('../brand/polygon-dark.jpg') center/cover fixed;
+}
+.footer-tags button { background:rgba(26,24,24,.62); }
+.footer-tags button:hover { background:rgba(40,36,36,.85); }
+.footer-bar { background:rgba(4,4,4,.72); }
