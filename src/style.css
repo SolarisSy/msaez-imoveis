@@ -491,3 +491,28 @@
 .property-grid .card-image { position:relative; overflow:hidden; }
 .property-grid .card-image img { transition:transform .5s cubic-bezier(.2,.7,.3,1); }
 .property-grid .property-card:hover .card-image img { transform:scale(1.05); }
+
+/* ==========================================================================
+   Grade de produtos — fundo geométrico low-poly no lugar do damask.
+   ========================================================================== */
+.catalog-panel {
+  background:linear-gradient(rgba(0,0,0,.06),rgba(0,0,0,.26)),url('../brand/polygon-dark.jpg') center/cover fixed;
+}
+/* A luz do topo fica sutil: as facetas já têm gradação própria. */
+.catalog-panel::before {
+  background:
+    radial-gradient(120% 58% at 50% -14%, rgba(255,235,215,.07), transparent 58%),
+    radial-gradient(ellipse at top left,rgba(0,0,0,.26),transparent 34%),
+    radial-gradient(ellipse at top right,rgba(0,0,0,.22),transparent 36%),
+    radial-gradient(ellipse at bottom left,rgba(0,0,0,.3),transparent 38%),
+    radial-gradient(ellipse at bottom right,rgba(0,0,0,.34),transparent 40%);
+}
+/* Sem piso de madeira: com o fundo geométrico vira só uma base escura. */
+.catalog-panel::after {
+  left:0; right:0; height:200px; transform:none; mask-image:none; -webkit-mask-image:none;
+  background:linear-gradient(180deg,transparent,rgba(4,4,4,.72));
+  box-shadow:none;
+}
+/* Cards: cinza neutro para acompanhar o fundo, com a borda quente da marca. */
+.property-grid .property-card { background:rgba(26,24,24,.82); border-color:rgba(214,164,145,.16); }
+.property-grid .property-card:hover { background:rgba(34,31,31,.92); }

@@ -63,15 +63,26 @@ texto — `.floating-whatsapp` no fim de `style.css`. É a única cor fora da pa
 site: o botão precisa ser reconhecido de imediato, então usa a cor da marca do WhatsApp.
 O ícone vem de `detailIcons.whatsapp`, não de um caractere de texto.
 
-## Grade de produtos — profundidade (a "sala 3D")
-O painel do catálogo simula um ambiente, em três camadas de CSS puro (sem assets novos):
+## Grade de produtos — fundo low-poly
+O fundo do catálogo é `brand/polygon-dark.jpg` (2560×1440, ~58KB): facetas triangulares
+em tons de `#060606` a `#3E3E3E`, mais claras na base. **Foi gerado proceduralmente**
+pelo script em `scripts/lowpoly.py` (Delaunay do scipy sobre uma grade com jitter,
+desenhada em 2x e reduzida com LANCZOS para bordas limpas) — regenerável com outra
+semente ou paleta.
+
+O véu por cima é leve (`rgba(0,0,0,.06 → .26)`): com véu forte as facetas somem e o
+fundo vira um preto chapado.
+
+Os cards viraram cinza neutro (`rgba(26,24,24,.82)`) com borda quente `#D6A491`, para
+acompanhar o fundo frio sem perder o vínculo com a marca.
+
+### Camadas de profundidade (herdadas da versão damask)
 
 1. **Parede** — `.catalog-panel::before`: spot de luz elíptico no topo
    (`rgba(255,228,203,.20)`) + vinheta radial nos quatro cantos. É a luz que dá volume.
-2. **Piso** — `.catalog-panel::after`: tábuas em `repeating-linear-gradient` com
-   `transform: perspective(560px) rotateX(70deg)` e `transform-origin: bottom`.
-   `left/right: -60%` para cobrir a largura depois da perspectiva, e `mask-image`
-   horizontal para as pontas não aparecerem como diagonais.
+2. ~~**Piso de madeira em perspectiva**~~ — desativado ao adotar o fundo geométrico
+   (madeira + low-poly conflitavam). O `::after` virou só um degradê escuro na base.
+   O código do piso está no histórico do git, se um dia voltar o fundo damask.
 3. **Cards** — sombra dupla projetada, `border-top` claro (highlight de luz) e, no hover,
    `translateY(-8px) scale(1.014)` com a imagem em `scale(1.05)`.
 
