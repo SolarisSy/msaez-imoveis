@@ -1,6 +1,30 @@
 # Design System
 
-## Paletas em uso
+## Paleta atual — Smoky Quartz (Pantone 18-1107 TCX)
+
+Cinzas quentes / taupe. **Substituiu o eixo rosa-terracota** (Powder Pink `#D6A491`,
+terracota `#A96559`, Desert Sand `#CFB591`) em todo o site — esses tons não devem voltar.
+
+| Token | Hex | Uso |
+|---|---|---|
+| `--sq-50` | `#FAF9F7` | superfícies claras |
+| `--sq-100` | `#F2F0EC` | topbar e hero |
+| `--sq-200` | `#E8E4DF` | fundo do conteúdo claro |
+| `--sq-300` | `#D6D1CB` | texto sobre escuro, CTA sólido |
+| `--sq-400` | `#ADA69F` | acento, ícones, eyebrows |
+| `--sq` | `#817973` | **Smoky Quartz** — acento forte, avatar, nav ativa |
+| `--sq-600` | `#635C57` | texto secundário no claro |
+| `--sq-700` | `#45403C` | — |
+| `--sq-900` | `#2B2724` | texto e títulos no claro; sidebar |
+
+Cards escuros: `rgba(38,35,33,.84)` com borda `rgba(173,166,159,.2)`.
+
+**Única cor fora da paleta:** o verde `#25D366` do botão do WhatsApp (marca de terceiro,
+precisa ser reconhecível) e o `#5BBE72` do ícone de WhatsApp inline.
+
+
+## Histórico de paletas (não reverter sem motivo)
+
 
 ### Site (header, hero) — escala Desert Sand
 Pantone 15-1214 TCX `#CFB591`, ampliada para dar contraste:

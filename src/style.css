@@ -526,3 +526,85 @@
 .footer-tags button { background:rgba(26,24,24,.62); }
 .footer-tags button:hover { background:rgba(40,36,36,.85); }
 .footer-bar { background:rgba(4,4,4,.72); }
+
+/* ==========================================================================
+   PALETA SMOKY QUARTZ — Pantone 18-1107 TCX (#817973)
+   Cinzas quentes e taupe. Substitui o eixo rosa/terracota do site inteiro.
+   ========================================================================== */
+:root {
+  --sq-50:#FAF9F7; --sq-100:#F2F0EC; --sq-200:#E8E4DF; --sq-300:#D6D1CB;
+  --sq-400:#ADA69F; --sq:#817973; --sq-600:#635C57; --sq-700:#45403C; --sq-900:#2B2724;
+}
+
+/* --- Cabeçalho, hero e estrutura clara --- */
+.app-shell { background:linear-gradient(90deg,rgba(242,240,236,.97),rgba(232,228,223,.92)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90') center/cover fixed; }
+.main-content { background:linear-gradient(180deg,var(--sq-100),var(--sq-200)); }
+.topbar { background:var(--sq-100); border-bottom:1px solid rgba(43,39,36,.12); }
+.hero-copy h1 { color:var(--sq-900); }
+.hero-copy h1 em { color:var(--sq); }
+.hero-copy .eyebrow { color:var(--sq); }
+.hero-text, .breadcrumb { color:var(--sq-600); }
+.hero-whatsapp { color:var(--sq); border-color:var(--sq-400); }
+.whatsapp-icon { color:var(--sq); }
+.whatsapp-icon:hover { color:var(--sq-900); }
+.menu-button::after { color:var(--sq); background:linear-gradient(to bottom,#817973 0 2px,transparent 2px 7px,#817973 7px 9px,transparent 9px 14px,#817973 14px 16px); }
+
+/* --- Menu lateral --- */
+.sidebar { background:rgba(43,39,36,.94); }
+.brand-mark { color:var(--sq-300); }
+.brand-mark small { color:var(--sq-400); }
+.nav-item { color:var(--sq-400); }
+.nav-item:hover, .nav-item.active { background:var(--sq); color:var(--sq-50); }
+.index-heading, .contact-link, .about-link { color:var(--sq-300); }
+
+/* --- Catálogo --- */
+.catalog-panel .catalog-toolbar h2 { color:var(--sq-50); }
+.catalog-panel .eyebrow { color:var(--sq-400); }
+.catalog-panel .filters label { color:var(--sq-400); }
+.catalog-panel .filters select { color:var(--sq-100); }
+.catalog-panel .filters select option { color:var(--sq-900); }
+.catalog-panel .filter-toggle { color:var(--sq-300); border-color:var(--sq); }
+.property-grid .property-card { background:rgba(38,35,33,.84); border-color:rgba(173,166,159,.2); }
+.property-grid .property-card:hover { background:rgba(52,48,45,.92); }
+.property-grid .card-body h3 { color:var(--sq-50); }
+.card-type, .price { color:var(--sq-300); }
+.property-grid .property-meta { color:var(--sq-300); border-color:rgba(173,166,159,.18); }
+.property-grid .card-footer { color:var(--sq-400); }
+.card-footer button { color:var(--sq-300); }
+.property-tag { background:var(--sq); color:var(--sq-50); }
+.favorite-button:hover { background:var(--sq-300); }
+
+/* --- Página do produto: mesmo fundo low-poly, tokens Smoky Quartz --- */
+.modal-card:has(.detail-page) {
+  background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.34)),url('../brand/polygon-dark.jpg') center/cover fixed;
+  scrollbar-color:var(--sq) rgba(20,20,20,.5);
+}
+.modal-card:has(.detail-page)::before { display:none; }
+.detail-page {
+  --ink:#F4F2EF; --ink-soft:#D6D1CB; --muted:#ADA69F;
+  --pink:#ADA69F; --pink-soft:rgba(173,166,159,.34); --pink-wash:rgba(24,23,22,.5);
+  --paper:rgba(38,35,33,.84); --hair:rgba(214,209,203,.16);
+}
+.detail-page .modal-close { background:rgba(38,35,33,.92); color:var(--ink); }
+.detail-page .modal-close:hover { background:var(--sq-300); color:var(--sq-900); }
+.detail-tools button.is-favorite { background:var(--sq-300); border-color:var(--sq-300); color:var(--sq-900); }
+.broker-avatar { background:var(--sq); color:#F4F2EF; }
+.form-action[data-detail-send="whatsapp"] { background:var(--sq-300); border-color:var(--sq-300); color:var(--sq-900); }
+.form-action[data-detail-send="whatsapp"] svg { color:var(--sq-900); }
+.form-action[data-detail-send="whatsapp"]:hover { background:#C6C0B9; border-color:#C6C0B9; }
+.stage-nav { background:rgba(24,23,22,.72); }
+.detail-thumbs .detail-thumb.is-selected { outline-color:var(--sq-300); }
+.broker-line svg { color:#5BBE72; }
+
+/* --- Rodapé --- */
+.site-footer { --f-ink:#F4F2EF; --f-soft:#D6D1CB; --f-muted:#ADA69F; --f-pink:var(--sq-400); --f-hair:rgba(214,209,203,.16); }
+
+/* --- Elementos que continuam quentes por identidade --- */
+.floating-whatsapp { background:#25D366; }        /* marca do WhatsApp */
+.floating-whatsapp:hover { background:#1FB855; }
+.catalog-panel .catalog-toolbar h2 span { color:var(--sq-400); }
+/* Resíduos marrons do tema anterior. */
+.broker-body { background:rgba(38,35,33,.72); border-color:rgba(214,209,203,.14); }
+.spec-badge { background:rgba(173,166,159,.18); color:var(--sq-300) !important; }
+.detail-page .detail-story p.detail-note { color:var(--muted); }
+.footer-brand img { filter:brightness(0) invert(1); opacity:.88; }
