@@ -12,6 +12,8 @@
       (`@media print` esconde ações e formulário).
 - [x] Responsivo até 820px; logo na paleta do site.
 
+- [x] Publicado no GitHub Pages com deploy automático a cada push na `main`.
+
 ## Falta
 - [ ] Dados reais: CRECI, e-mail, telefone da corretora.
 - [ ] Fotos reais por imóvel (hoje a galeria repete as mesmas imagens).

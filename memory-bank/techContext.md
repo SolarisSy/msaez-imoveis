@@ -41,3 +41,18 @@ Ao trocar a logo, atualize as duas.
 ## Armadilha do ambiente
 O diretório do projeto termina com **espaço**: `~/Desktop/site da isa ` (com espaço
 final). `cd ~/Desktop/"site da isa"` falha — sempre inclua o espaço nas aspas.
+
+## Publicação
+Repositório: **https://github.com/SolarisSy/msaez-imoveis** (público)
+Site no ar: **https://solarissy.github.io/msaez-imoveis/**
+
+Cada push na `main` dispara `.github/workflows/deploy.yml` (Actions → build Vite →
+`upload-pages-artifact` → `deploy-pages`). O source do Pages é **GitHub Actions**, não
+uma branch — foi habilitado por
+`gh api -X POST repos/SolarisSy/msaez-imoveis/pages -f build_type=workflow`.
+
+Se o primeiro deploy falhar com `HttpError: Not Found` em `deploy-pages`, é o Pages
+ainda não habilitado: habilite e rode `gh run rerun <id>`.
+
+O `base: './'` do `vite.config.js` é o que faz o site funcionar no subpath
+`/msaez-imoveis/` — sem ele, todos os assets dariam 404 no GitHub Pages.
